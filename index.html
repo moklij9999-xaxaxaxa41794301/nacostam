@@ -1,0 +1,114 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<style>
+body,
+button {
+  font-family: "Shantell Sans", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "BNCE" 0,
+    "INFM" 0,
+    "SPAC" 0;
+  background-color: black;
+  color: #ff71ea;
+}
+#pp {
+text-align: center;
+}
+button {
+padding: 30px;
+width: 80%;
+height: 70%;
+background-color: black;
+color: #ff71ea;
+border-radius: 20px 0px 20px 0px;
+border: 5px solid #ff71ea;
+font-size: 50px;
+}
+    .uklad-3-kolumny {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .czesc {
+      padding: 16px;
+    }
+</style>
+</head>
+<body>
+<h1 id="pp">Przykłady dźwięków binaruralnych</h1>
+<audio id="alpha" src="https://bf5dd6ff8e.cbaul-cdnwnd.com/1b9b63b9b6c0e8d55b44ec0099beac54/200000312-502df502e1/alpha.mp3?ph=bf5dd6ff8e" loop></audio>
+<audio id="gamma" src="https://bf5dd6ff8e.cbaul-cdnwnd.com/1b9b63b9b6c0e8d55b44ec0099beac54/200000313-eca29eca2b/gamma.mp3?ph=bf5dd6ff8e" loop></audio>
+<audio id="theta" src="https://bf5dd6ff8e.cbaul-cdnwnd.com/1b9b63b9b6c0e8d55b44ec0099beac54/200000314-725d4725d6/theta.mp3?ph=bf5dd6ff8e" loop></audio>
+<div class="uklad-3-kolumny">
+<div class="czesc">
+<h1>alpha</h1>
+<button id="alphab" onclick="alphab()">▶</button>
+</div>
+<div class="czesc">
+<h1>gamma</h1>
+<button id="gammab" onclick="gammab()">▶</button>
+</div>
+<div class="czesc">
+<h1>theta</h1>
+<button id="thetab" onclick="thetab()">▶</button>
+</div>
+</div>
+<img src="https://alfasiedliska.pl/wp-content/uploads/1989/08/gniadek_pawel2.png" width="44" height="60" style="position: fixed;bottom: 0px;right: 0px;z-index: 69;"/>
+<script>
+const alphao = document.getElementById('alphab');
+const gammao = document.getElementById('gammab');
+const thetao = document.getElementById('thetab');
+const alpha = document.getElementById('alpha');
+const gamma = document.getElementById('gamma');
+const theta = document.getElementById('theta');
+
+function alphab(){
+gammao.innerHTML = '▶';
+gamma.pause();
+thetao.innerHTML = '▶';
+theta.pause();
+if(alphao.textContent === '▶'){
+alphao.innerHTML = '⏸';
+alpha.play();
+} else {
+alphao.innerHTML = '▶';
+alpha.pause();
+}
+}
+function gammab(){
+alphao.innerHTML = '▶';
+alpha.pause();
+thetao.innerHTML = '▶';
+theta.pause();
+if(gammao.textContent === '▶'){
+gammao.innerHTML = '⏸';
+gamma.play();
+} else {
+gammao.innerHTML = '▶';
+gamma.pause();
+}
+}
+function thetab(){
+alphao.innerHTML = '▶';
+alpha.pause();
+gammao.innerHTML = '▶';
+gamma.pause();
+if(thetao.textContent === '▶'){
+thetao.innerHTML = '⏸';
+theta.play();
+} else {
+thetao.innerHTML = '▶';
+theta.pause();
+}
+}
+</script>
+</body>
+</html>
