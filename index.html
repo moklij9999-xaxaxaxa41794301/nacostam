@@ -10,14 +10,14 @@ body,
 button {
   font-family: "Shantell Sans", cursive;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: <weight>; /* wyjebane, dziala bez tego */
   font-style: normal;
   font-variation-settings:
     "BNCE" 0,
     "INFM" 0,
     "SPAC" 0;
   background-color: black;
-  color: #ff71ea;
+  color: #ff71ea; /* rozowy z czarnym wyglada najladniej imo */
 }
 #pp {
 text-align: center;
@@ -44,6 +44,7 @@ font-size: 50px;
 </head>
 <body>
 <h1 id="pp">Przykłady dźwięków binaruralnych</h1>
+<!-- aha ma byc binauralnych, ale poki sie ktos nie skapnie to nie zmieniam xd -->
 <audio id="alpha" src="https://github.com/moklij9999-xaxaxaxa41794301/nacostam/raw/refs/heads/main/alpha.mp3" loop></audio>
 <audio id="gamma" src="https://github.com/moklij9999-xaxaxaxa41794301/nacostam/raw/refs/heads/main/gamma.mp3" loop></audio>
 <audio id="theta" src="https://github.com/moklij9999-xaxaxaxa41794301/nacostam/raw/refs/heads/main/theta.mp3" loop></audio>
@@ -61,6 +62,7 @@ font-size: 50px;
 <button id="thetab" onclick="thetab()">▶</button>
 </div>
 </div>
+<!-- filip nie bij plss -->
 <img src="https://alfasiedliska.pl/wp-content/uploads/1989/08/gniadek_pawel2.png" width="33" height="45" onclick="aj()" style="position: fixed;bottom: 0px;right: 0px;z-index: 69;"/>
 <script>
 const alphao = document.getElementById('alphab');
@@ -70,6 +72,7 @@ const alpha = document.getElementById('alpha');
 const gamma = document.getElementById('gamma');
 const theta = document.getElementById('theta');
 
+// zabezpieczenie, wrona nie godna
 let cwl = 0;
 function aj(){
   cwl++;
@@ -79,6 +82,7 @@ function aj(){
   }
 }
 
+// zeby sie nie nakladaly dzwieki na siebie itd
 function alphab(){
 gammao.innerHTML = '▶';
 gamma.pause();
